@@ -1,0 +1,322 @@
+/* CSS sheet written from https://www.w3schools.com/howto/howto_make_a_website.asp. */
+
+:root {
+  --light-pink: #e85e8a;
+  --dark-pink: #f91a61;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img.flag {
+  height: 20px;
+  vertical-align: -4px;
+}
+
+/* Body */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+a { /* link color */
+  color: var(--light-pink);
+  text-decoration: none;
+}
+a:hover { /* hover link color */
+  color: var(--dark-pink);
+}
+
+/* Header */
+
+.header {
+  background: url(https://raw.githubusercontent.com/yketa/UBC_2018_Wiki/master/Images/header.png);
+/*  height: 10%;*/
+  padding: 30px;
+}
+
+.header h1 {
+  font-size: 50px;
+  vertical-align: middle;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000; /* https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+}
+
+/* Containers */
+
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex: 1 1 auto; /* IE 10 */
+  flex: 1 1 auto;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.navmain {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
+/* Sidebar/left column */
+
+.side {
+  -ms-flex: 0 0 275px; /* IE10 */
+  flex: 0 0 275px;
+  overflow-y: auto;
+  min-height: 0px;
+  background-color: #171a1c;
+  padding: 20px;
+}
+
+.side h2 {
+  /*text-align: center;*/
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: -5px;
+  margin-bottom: -15px;
+}
+
+.side h4 {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.side h5 {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.side img#avatar {
+  max-width: 50%;
+  max-height: 50%;
+  display: block; margin-left: auto; margin-right: auto; /* centre image */
+}
+
+.side a {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.side a>i {
+  font-size: 22px;
+  font-weight: normal;
+  vertical-align: -4px;
+}
+
+.side ul {
+  padding-left: 15px;
+}
+
+.side li {
+  font-size: 14px;
+}
+
+.side .links {
+  text-align: center;
+}
+
+.side p.location {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Navigation bar */
+
+.navbar {
+  background-color: black;
+}
+
+.navbar a { /* navigation bar links */
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar a.right { /* navigation bar right-aligned link */
+  float: right;
+}
+
+.navbar a.active { /* navigation bar active link */
+  background-color: var(--light-pink);
+}
+
+.navbar a:hover { /* nagitation bar hover link */
+/*  background-color: rgba(232, 94, 138, 0.6);*/
+  background-color: var(--dark-pink);
+}
+
+/* Underbar */
+
+#underbar {
+  height: 2px;
+  background-color: var(--light-pink);
+}
+
+#underbar.hover {
+  background-color: var(--dark-pink);
+}
+
+/* Main column */
+
+.main {
+  flex: 1 1; /* https://stackoverflow.com/questions/14962468/flexbox-and-vertical-scroll-in-a-full-height-app-using-newer-flexbox-api */
+  overflow-y: auto;
+  min-height: 0px;
+  background-color: #0c0d0d;
+  padding: 20px;
+}
+
+.main h2 {
+  font-size: 24px;
+} 
+
+.main ul {
+ list-style-type: square;
+}
+
+/* Main column (About) */
+
+.main div.about {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Main column (Research) */
+
+.main div.research {
+  display: flex;
+  flex-direction: row;
+}
+
+.main div.research > div.description {
+  flex: 80%;
+  float: left;
+}
+
+.main div.research > div.logo {
+  flex: 20%;
+  float: right;
+  text-align: center;
+}
+
+.main div.research > div.description > h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.main div.research > div.description h4 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.main div.research > div.description > div.supervisor {
+  margin-top: -15px;
+}
+
+.main div.research > div.description > div.supervisor a {
+  font-weight: bold;
+}
+
+.main div.research > div.description > div.location > h5 {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: -15px;
+}
+
+.main div.research > div.description > div.section {
+  margin-top: 10px;
+}
+
+.main div.research > div.description > div.section > .sectionTitle {
+  font-weight: bold;
+}
+
+.main div.research > div.description > div.section  p, .main div.research > div.description > div.section  li {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.main div.research > div.description > div.section > p.content {
+  margin-left: 10px;
+}
+
+.main div.research > div.logo > img.logo {
+  width: 95%;
+  vertical-align: top;
+}
+
+/* Main column (Publications) */
+
+.main h2 {
+  margin-top: 0;
+}
+
+.main p.article {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.main div.abstract {
+  width: 80%;
+  margin-left: 20px;
+  margin-top: 10px;
+  background-color: #0a0a0a;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.main p.abstract {
+  padding: 10px;
+}
+
+/* Footer */
+
+.footer {
+  overflow: hidden;
+  -ms-flex: 0 0 20px;
+  flex: 0 0 20px;
+  text-align: center;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  font-size: 10px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
