@@ -6,7 +6,7 @@
 
   <title>Yann-Edwin Keta</title>
   <meta charset="UTF-8">
-  <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.ico"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
   <link href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
