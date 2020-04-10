@@ -37,9 +37,10 @@ a:hover { /* hover link color */
 /* Header */
 
 .header {
-  background: url(https://raw.githubusercontent.com/yketa/UBC_2018_Wiki/master/Images/header.png);
-/*  height: 10%;*/
-  padding: 30px;
+  background: url(https://raw.githubusercontent.com/yketa/DAMTP_2019_Wiki/master/Images/header.svg?sanitize=true);
+  background-size: cover;
+  background-color: #000000;
+  padding: 40px;
 }
 
 .header h1 {
