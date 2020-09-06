@@ -38,16 +38,17 @@ function overUnderbar() {
 }
 
 /* Show/hide */
-function showHide(el, id) {
-  if (document.getElementById(id).style.display == "none") { /* show element */
-    el.innerHTML = el.innerHTML.replace("fa-chevron-right", "fa-chevron-down");
-/*    el.innerHTML = '<i class="fas fa-chevron-down"></i>&nbsp;Abstract';*/
-    document.getElementById(id).style.display = "";
-  }
-  else { /* hide element */
-    el.innerHTML = el.innerHTML.replace("fa-chevron-down", "fa-chevron-right");
-/*    el.innerHTML = '<i class="fas fa-chevron-right"></i>&nbsp;Abstract';*/
-    document.getElementById(id).style.display = "none";
+function showHide(el, cl) {
+  var elements = document.getElementsByClassName(cl);
+  for (var i = 0; i < elements.length; i++) {
+    if (elements.item(i).style.display == "none") { /* show element */
+      el.innerHTML = el.innerHTML.replace("fa-chevron-right", "fa-chevron-down");
+      elements.item(i).style.display = "";
+    }
+    else { /* hide element */
+      el.innerHTML = el.innerHTML.replace("fa-chevron-down", "fa-chevron-right");
+      elements.item(i).style.display = "none";
+    }
   }
 }
 

@@ -29,6 +29,7 @@ body {
 a { /* link color */
   color: var(--light-pink);
   text-decoration: none;
+  outline: none;
 }
 a:hover { /* hover link color */
   color: var(--dark-pink);
@@ -40,7 +41,7 @@ a:hover { /* hover link color */
   background: url(https://raw.githubusercontent.com/yketa/DAMTP_MSC_2019_Wiki/master/Images/header.svg?sanitize=true);
   background-size: cover;
   background-color: #000000;
-  padding: 40px;
+  padding: 2.5%;
 }
 
 .header h1 {
@@ -185,6 +186,7 @@ a:hover { /* hover link color */
 
 .main h2 {
   font-size: 24px;
+  margin-top: 0;
 } 
 
 .main ul {
@@ -214,6 +216,9 @@ a:hover { /* hover link color */
   flex: 20%;
   float: right;
   text-align: center;
+  object-fit: contain; /* https://stackoverflow.com/questions/31967019/max-width-doesnt-work-in-flexbox */
+  min-width: 0;
+  max-width: 150px;
 }
 
 .main div.research > div.description > h3 {
@@ -258,16 +263,17 @@ a:hover { /* hover link color */
   margin-left: 10px;
 }
 
+.main div.research > div.description > div.section  h2.publicationYear {
+  /* hack to keep BibTeX-js from displaying years following the template in panes/publications.html */
+  display: none;
+}
+
 .main div.research > div.logo > img.logo {
   width: 95%;
   vertical-align: top;
 }
 
-/* Main column (Publications) */
-
-.main h2 {
-  margin-top: 0;
-}
+/* Publications */
 
 .main p.article {
   text-align: justify;
