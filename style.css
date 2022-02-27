@@ -200,6 +200,13 @@ a:hover { /* hover link color */
   text-justify: inter-word;
 }
 
+.main div.about div.bottom {
+  position: absolute;
+  bottom: 0;
+  padding: inherit;
+  padding-right: 20px;
+}
+
 /* Main column (Research) */
 
 .main div.research {
